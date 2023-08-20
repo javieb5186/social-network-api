@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server",
     "dev": "nodemon server",
-    "lint": "eslint server.js develop"
+    "lint": "eslint server.js develop",
+    "seed": "node develop/utils/seed.js"
   },
   "keywords": [],
   "author": "",
