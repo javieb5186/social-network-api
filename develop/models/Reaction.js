@@ -1,4 +1,4 @@
-const {Schema} = require('mongoose');
+const {Schema, Types} = require('mongoose');
 
 const reactionSchema = new Schema(
     {
@@ -21,6 +21,11 @@ const reactionSchema = new Schema(
         get: (d) => d.toLocaleDateString(),
       },
     },
+    {
+      _id: false,
+    }
 );
+
+reactionSchema.path('reactionId');
 
 module.exports = reactionSchema;
