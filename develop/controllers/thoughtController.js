@@ -23,7 +23,6 @@ module.exports = {
     try {
       const thought = await Thought.create(req.body);
       const user = await User.findOne({username: req.body.username});
-      console.log(user);
       user.thoughts.push(thought._id);
       await user.save();
       res.json(user);
@@ -34,8 +33,9 @@ module.exports = {
   },
   async updateThought(req, res) {
     try {
-      const thought = await Thought.findByIdAndUpdate(req.params._id, 
-        {$set: req.body},
+      const thought = await Thought.findByIdAndUpdate(req.params._id,
+          {$set: req.body},
+          {runValidators: true, new: true},
       );
       res.json(thought);
     } catch (err) {
@@ -72,4 +72,4 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-}
+};
