@@ -8,6 +8,7 @@ An API to be used for a social network.
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Video](#video)
 
 ## Description
 
@@ -138,3 +139,7 @@ Body: `{
 ### Documentation
 
 - https://mongoosejs.com/docs/index.html 
+
+## Video
+
+Link - https://drive.google.com/file/d/1eqwD_LQrovdayKBU3M9S574MtLKSTZst/view 
